@@ -42,13 +42,30 @@ session_start();
 					<div class="col-md-6">
 						<div class="contact-form">
 							<h4>Send A Message</h4>
-							<form>
-								<input class="input" type="text" name="name" placeholder="Name">
-								<input class="input" type="email" name="email" placeholder="Email">
-								<input class="input" type="text" name="subject" placeholder="Subject">
-								<textarea class="input" name="message" placeholder="Enter your Message"></textarea>
-								<button class="main-button icon-button pull-right">Send Message</button>
-							</form>
+							<form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- Your Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="ebe332ff-3cec-4044-b604-d98ed5361db7">
+
+    <!-- Email Subject -->
+    <input type="hidden" name="subject" value="New Contact Message from Career.ly">
+
+    <!-- Prevent spam (Web3Forms recommendation) -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+    <input class="input" type="text" name="name" placeholder="Name" required>
+    <input class="input" type="email" name="email" placeholder="Email" required>
+    <input class="input" type="text" name="phone" placeholder="Phone (optional)">
+    <input class="input" type="text" name="user_subject" placeholder="Subject" required>
+
+    <textarea class="input" name="message" placeholder="Enter your Message" required></textarea>
+
+    <button class="main-button icon-button pull-right" type="submit">
+        Send Message
+    </button>
+
+</form>
+
 						</div>
 					</div>
 					<!-- /contact form -->
@@ -57,9 +74,9 @@ session_start();
 					<div class="col-md-5 col-md-offset-1">
 						<h4>Contact Information</h4>
 						<ul class="contact-details">
-							<li><i class="fa fa-envelope"></i>Careerly@gmail.com</li>
+							<li><i class="fa fa-envelope"></i>vikastanwar2222@gmail.com</li>
 							<li><i class="fa fa-phone"></i>122-547-223-45</li>
-							<li><i class="fa fa-map-marker"></i>Santacruz west</li>
+							<li><i class="fa fa-map-marker"></i>Delhi</li>
 						</ul>
 
 						<!-- contact map -->
